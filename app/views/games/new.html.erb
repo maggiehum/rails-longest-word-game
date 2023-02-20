@@ -1,5 +1,9 @@
-<ul>
-  <% @letters.each do |letter| %>
-    <li><%= letter %></li>
-  <% end %>
-</ul>
+<h1>New game</h1>
+
+<p><%= @letters %></p>
+
+<p>What is the longest word you can think of?</p>
+<form action="/score" method="POST" data-turbo="false">
+  <input type="text" name="answer">
+  <input type="submit" value="Play!">
+</form>
